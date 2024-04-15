@@ -48,7 +48,7 @@ void mostrarPantallaInicial(int rows, int cols) {
    
 
     mvprintw(25, cols / 2 - 5, "REGLAS");
-    mvprintw(27, cols / 2 - 18, "Gana el primero que llegue a 2 puntos.");
+    mvprintw(27, cols / 2 - 18, "Gana el primero que llegue a 3 puntos.");
 
     // Mostrar nombre
     mvprintw(rows - 1, cols / 2 - 16, "Realizado por: Marta Díaz Artigot");
