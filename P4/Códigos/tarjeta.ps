@@ -1,0 +1,48 @@
+%!
+% Ejercicio 2: Tarjeta de visita
+
+% Dibujar el marco de la tarjeta (rectángulo)
+newpath
+0 0 0 setrgbcolor           % Establecer el color del contorno a negro
+72 72 moveto                % Mover al punto de inicio 
+432 0 rlineto               % Dibujar una línea horizontal de 432 puntos
+0 216 rlineto               % Dibujar una línea vertical de 216 puntos
+-432 0 rlineto              % Dibujar una línea horizontal de vuelta al punto de inicio
+closepath                   % Cerrar el camino para completar el rectángulo
+stroke                      % Dibujar el contorno del rectángulo
+
+% Dibujar el fondo de la tarjeta (rectángulo)
+newpath
+1 1 1 setrgbcolor           % Establecer el color a blanco
+74 74 moveto                % Mover al punto de inicio 
+428 0 rlineto               % Dibujar una línea horizontal de 428 puntos
+0 212 rlineto               % Dibujar una línea vertical de 212 puntos
+-428 0 rlineto              % Dibujar una línea horizontal de vuelta al punto de inicio
+closepath                   % Cerrar el camino para completar el rectángulo
+fill                        % Rellenar el rectángulo con el color establecido
+
+% Dibujar un círculo a la derecha
+newpath
+0 0 1 setrgbcolor           % Establecer el color a azul
+180 180 50 0 360 arc        % Dibujar un círculo en (180, 180) con radio 50
+fill
+stroke
+
+% Dibujar el texto
+/Helvetica-Bold findfont 12 scalefont setfont
+
+newpath
+290 220 moveto              % Mover al punto de inicio (290, 220)
+(Marta Diaz Artigot) show   % Mostrar el primer texto
+
+newpath
+0.5 0.5 0.5 setrgbcolor     % Establecer el color a gris oscuro
+290 200 moveto              % Mover al punto de inicio (290, 200)
+(Ingeniera Informatica) show% Mostrar el segundo texto
+
+newpath
+290 180 moveto              % Mover al punto de inicio (290, 180)
+(marta@correo.ugr.es) show % Mostrar el tercer texto
+
+showpage                    % Mostrar la página
+

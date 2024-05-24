@@ -1,0 +1,88 @@
+%!
+% Ejercicio 1: Casita
+
+% 595x842 (A4)
+
+% Césped
+newpath                    % Iniciar el 'path' del Rectángulo
+0 0.5 0 setrgbcolor        % Establecer el color a verde
+
+0 0 moveto                 % Mover al punto (x, y) = (0, 0)
+595 0 rlineto              % Trazar línea al (595, 0)
+0 450 rlineto              % Trazar línea al (595, 450)
+-595 0 rlineto             % Trazar línea al (0, 450)
+closepath                  % Cerrar el Rectángulo
+
+fill
+stroke
+
+% Cielo
+newpath                      % Iniciar un nuevo camino
+0.53 0.81 0.98 setrgbcolor   % Establecer el color a celeste 
+
+0 450 moveto                 % Mover al punto de inicio (0, 450)
+595 0 rlineto                % Dibujar una línea horizontal de 595 puntos (ancho de la página)
+0 392 rlineto                % Dibujar una línea vertical hacia arriba de 392 puntos
+-595 0 rlineto               % Dibujar una línea horizontal hacia la izquierda de 595 puntos
+closepath                    % Cerrar el camino para completar el rectángulo
+
+fill                         % Rellenar el rectángulo con el color establecido
+stroke                       % Dibujar el contorno del rectángulo
+
+
+% Dibujar la base de la casa (cuadrado grande)
+newpath
+1 1 0.88 setrgbcolor       % Establecer el color a amarillo pastel
+247.5 300 moveto           % Mover al punto de inicio 
+200 0 rlineto              % Dibujar el lado inferior
+0 200 rlineto              % Dibujar el lado derecho
+-200 0 rlineto             % Dibujar el lado superior
+closepath                  % Cerrar el camino para completar el cuadrado
+fill
+stroke
+
+% Dibujar el techo (triángulo grande)
+newpath
+1 0 0 setrgbcolor          % Establecer el color a rojo
+247.5 500 moveto           % Mover a la esquina superior izquierda del cuadrado
+100 100 rlineto            % Dibujar el lado izquierdo del triángulo
+100 -100 rlineto           % Dibujar el lado derecho del triángulo
+-200 0 rlineto             % Dibujar la base del triángulo
+closepath                  % Cerrar el camino para completar el triángulo
+fill
+stroke
+
+% Dibujar la ventana izquierda (cuadrado pequeño)
+newpath
+0.53 0.81 0.98 setrgbcolor % Establecer el color a celeste
+270 420 moveto             % Mover al punto de inicio
+30 0 rlineto               % Dibujar el lado inferior
+0 30 rlineto               % Dibujar el lado derecho
+-30 0 rlineto              % Dibujar el lado superior
+closepath                  % Cerrar el camino para completar el cuadrado
+fill
+stroke
+
+% Dibujar la ventana derecha (cuadrado pequeño)
+newpath
+0.53 0.81 0.98 setrgbcolor % Establecer el color a celeste
+370 420 moveto             % Mover al punto de inicio
+30 0 rlineto               % Dibujar el lado inferior
+0 30 rlineto               % Dibujar el lado derecho
+-30 0 rlineto              % Dibujar el lado superior
+closepath                  % Cerrar el camino para completar el cuadrado
+fill
+stroke
+
+% Dibujar la puerta (rectángulo grande)
+newpath
+0.5 0.25 0 setrgbcolor     % Establecer el color a marrón oscuro
+320 300 moveto             % Mover al punto de inicio
+40 0 rlineto               % Dibujar el lado inferior
+0 80 rlineto               % Dibujar el lado derecho
+-40 0 rlineto              % Dibujar el lado superior
+closepath                  % Cerrar el camino para completar el rectángulo
+fill
+stroke
+
+showpage % Mostrar la página
